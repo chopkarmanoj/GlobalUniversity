@@ -35,11 +35,6 @@
                         "allowedPushOperations": "createUpdateAndDelete",
                         "scope": "SingleItem"
                     },
-					 {
-                        "path": "/Project",
-                        "allowedPushOperations": "createUpdateAndDelete",
-                        "scope": "itemAndDescendants"
-                    },
                     {
                         "path": "*",
                         "scope": "ignored"
