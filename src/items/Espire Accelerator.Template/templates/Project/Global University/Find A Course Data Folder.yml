@@ -1,16 +1,18 @@
 ﻿---
-ID: "66a751bf-9bcd-4fc4-a2b8-71ee2ebc5110"
-Parent: "c74739bb-394a-4f5d-a449-0df57c1545bd"
-Template: "fab30e6e-f3ce-4ac2-9ad5-607355a93858"
-Path: /sitecore/content/GlobalUniversitySC/GlobalUniversity/Home/New Courses
+ID: "a6713cde-c3e6-46a8-8e02-fa82f1d08cda"
+Parent: "318fc5e0-022f-4cb4-9a0f-0fe556a0e10e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Global University/Find A Course Data Folder
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: /~/icon/applications/32x32/text_marked.png
-- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
-  Hint: __Thumbnail
-  Value: |
-    <image mediaid="{8E79742B-69DA-4EE0-BFFA-898452D4EE23}" />
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{4CD4A0C4-842B-485A-94BB-845448AC5227}"
 Languages:
 - Language: en
   Versions:
@@ -18,10 +20,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20240122T085228Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: New Courses
+      Value: 20240122T152921Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -32,14 +31,11 @@ Languages:
         sitecore\manoj.chopkar@espire.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f2734631-16c2-45b3-8b54-8d65addd6244"
-    - ID: "b772797c-97c7-4e42-a99a-338b1db03e0c"
-      Hint: Title
-      Value: New Courses
+      Value: "03db0780-efd0-4056-868c-f64d67ce302b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\manoj.chopkar@espire.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240122T094016Z
+      Value: 20240122T153112Z
