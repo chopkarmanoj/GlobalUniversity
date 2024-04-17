@@ -57,8 +57,9 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: process.env.IMAGE_DOMAINS ? process.env.IMAGE_DOMAINS.split(',') : [],
+    domains: ['edge.sitecorecloud.io'],
   },
+
   ...headerConfig,
 };
 
