@@ -75,21 +75,9 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: [
-      'espire-starter-kit-dev-espire.vercel.app',
-      'edge.sitecorecloud.io'
-    ],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "edge.sitecorecloud.io",
-      },    
-      {
-        protocol: "https",
-        hostname: "espire-starter-kit-dev-espire.vercel.app",
-      },  
-    ],
+    domains: ['edge.sitecorecloud.io'],
   },
+
   ...headerConfig,
 };
 
