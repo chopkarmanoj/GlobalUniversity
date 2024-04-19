@@ -1,6 +1,5 @@
 import React from 'react';
 import { BannerTemplateProps } from 'lib/component-props/EspireTemplateProps/PageContent/BannerTemplateProps';
-
 import {
   Link as JssLink,
   RichText as JssRichText,
