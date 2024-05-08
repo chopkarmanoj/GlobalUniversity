@@ -1,12 +1,12 @@
 import React, { CSSProperties } from 'react';
 import {
-  Image as JssImage,
   Link as JssLink,
   ImageField,
   Field,
   LinkField,
   Text,
   useSitecoreContext,
+  NextImage,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
@@ -38,12 +38,7 @@ export const Banner = (props: ImageProps): JSX.Element => {
   const backgroundStyle = (props?.fields?.Image?.value?.src && {
     backgroundImage: `url('${props.fields.Image.value.src}')`,
   }) as CSSProperties;
-  const modifyImageProps = {
-    ...props.fields.Image,
-    editable: props?.fields?.Image?.editable
-      ?.replace(`width="${props?.fields?.Image?.value?.width}"`, 'width="100%"')
-      .replace(`height="${props?.fields?.Image?.value?.height}"`, 'height="100%"'),
-  };
+
   const id = props.params.RenderingIdentifier;
 
   return (
@@ -52,23 +47,21 @@ export const Banner = (props: ImageProps): JSX.Element => {
       id={id ? id : undefined}
     >
       <div className="component-content sc-sxa-image-hero-banner" style={backgroundStyle}>
-        {sitecoreContext.pageEditing ? <JssImage field={modifyImageProps} /> : ''}
+        <NextImage field={props?.fields?.Image} />
       </div>
     </div>
   );
 };
 
 export const Default = (props: ImageProps): JSX.Element => {
-  const { sitecoreContext } = useSitecoreContext();
-
   if (props.fields) {
-    const Image = () => <JssImage field={props.fields.Image} />;
+    const Image = () => <NextImage field={props?.fields?.Image} />;
     const id = props.params.RenderingIdentifier;
 
     return (
       <div className={`component image ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
-          {sitecoreContext.pageState === 'edit' || !props.fields.TargetUrl?.value?.href ? (
+          {!props.fields.TargetUrl?.value?.href ? (
             <Image />
           ) : (
             <JssLink field={props.fields.TargetUrl}>

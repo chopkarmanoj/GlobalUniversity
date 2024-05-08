@@ -35,6 +35,8 @@ const nextConfig = {
   // can be served from the Next.js Image Optimization API
   // see https://nextjs.org/docs/app/api-reference/components/image#remotepatterns
   images: {
+    domains: ['edge.sitecorecloud.io'],
+    dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -46,7 +48,7 @@ const nextConfig = {
         hostname: 'feaas*.blob.core.windows.net',
         port: '',
       },
-    ]
+    ],
   },
 
   async rewrites() {
@@ -73,9 +75,6 @@ const nextConfig = {
         destination: `${jssConfig.sitecoreApiHost}/sitecore/service/:path*`,
       },
     ];
-  },
-  images: {
-    domains: ['edge.sitecorecloud.io'],
   },
 
   ...headerConfig,
