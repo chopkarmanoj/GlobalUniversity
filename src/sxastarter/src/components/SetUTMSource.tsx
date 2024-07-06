@@ -10,14 +10,12 @@ export const SetUTMSource = () => {
   useEffect(() => {
     // Function to check if data from API is loaded in the DOM
     const checkDataLoaded = () => {
-      const dataLoadedElement = document.querySelector(
-        '[data-formid=f649a87b76fb4a15b11025be3f339759-aue]'
-      );
+      const dataLoadedElement = document.querySelectorAll('[data-formid]');
       return dataLoadedElement;
     };
 
     const interval = setInterval(() => {
-      if (checkDataLoaded()) {
+      if (checkDataLoaded().length > 0) {
         setIsDataLoaded(true);
         clearInterval(interval); //Clear after setting utm value
       }
@@ -28,12 +26,14 @@ export const SetUTMSource = () => {
 
   useEffect(() => {
     if (isDataLoaded && typeof document !== 'undefined') {
-      const form = document.querySelector('[data-formid=f649a87b76fb4a15b11025be3f339759-aue]');
+      const form = document.querySelectorAll('[data-formid]');
       if (form) {
-        const utmInput = form.querySelector('[name=utm]');
-        if (utmInput) {
-          utmInput.setAttribute('value', utmSource as string);
-        }
+        Array.from(form)?.map((item) => {
+          const utmInput = item?.querySelector('[name=utm]');
+          if (utmInput) {
+            utmInput.setAttribute('value', utmSource as string);
+          }
+        });
       }
     }
   }, [isDataLoaded, utmSource]);
