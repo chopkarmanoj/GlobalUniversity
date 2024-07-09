@@ -8,6 +8,7 @@ import config from 'temp/config';
 import Scripts from 'src/Scripts';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+import { SetUTMSource } from './components/SetUTMSource';
 // import Cookie from 'components/Espire/Header/Cookie';
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
@@ -74,6 +75,7 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
           <div id="header">{route && <Placeholder name="headless-header" rendering={route} />}</div>
         </header>
         <main>
+          <SetUTMSource />
           <div id="content">{route && <Placeholder name="headless-main" rendering={route} />}</div>
         </main>
         <footer>

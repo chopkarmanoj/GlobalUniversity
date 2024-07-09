@@ -26,7 +26,6 @@ const CdpPageView = (): JSX.Element => {
   const disabled = () => {
     return process.env.NODE_ENV === 'development';
   };
-
   useEffect(() => {
     // Do not create events in editing or preview mode or if missing route data
     if (pageState !== LayoutServicePageState.Normal || !route?.itemId) {
