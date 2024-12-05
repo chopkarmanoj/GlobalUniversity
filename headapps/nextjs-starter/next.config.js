@@ -36,6 +36,7 @@ const nextConfig = {
   // see https://nextjs.org/docs/app/api-reference/components/image#remotepatterns
   images: {
     domains: ['edge.sitecorecloud.io'],
+    dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -80,6 +81,7 @@ const nextConfig = {
       },
     ];
   },
+
   ...headerConfig,
 };
 
