@@ -8,6 +8,21 @@
                 "allowedPushOperations": "createUpdateAndDelete",
                 "scope": "itemAndDescendants",
                 "rules": [
+					{
+                        "path": "/Project/GlobalUniversitySC/GlobalUniversity/System",
+                        "allowedPushOperations": "createUpdateAndDelete",
+                        "scope": "ignored"
+                    },					
+					{
+                        "path": "/Project/GlobalUniversitySC/GlobalUniversity",
+                        "allowedPushOperations": "createUpdateAndDelete",
+                        "scope": "itemAndDescendants"
+                    },
+					{
+                        "path": "/Project/GlobalUniversitySC",
+                        "allowedPushOperations": "createUpdateAndDelete",
+                        "scope": "itemAndDescendants"
+                    },
                     {
                         "path": "/Feature",
                         "allowedPushOperations": "createUpdateAndDelete",
